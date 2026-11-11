@@ -186,6 +186,19 @@
       margin-bottom: 12px;
     }
 
+    .skill-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-group h3 {
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -354,17 +367,40 @@
     <div class="container">
       <h2 class="section-title"><span>03.</span> Technical Skills</h2>
 
-      <div class="skills">
-        <span class="skill">Python</span>
-        <span class="skill">Pandas</span>
-        <span class="skill">NumPy</span>
-        <span class="skill">SQL</span>
-        <span class="skill">DuckDB</span>
-        <span class="skill">Matplotlib</span>
-        <span class="skill">Scikit-learn</span>
-        <span class="skill">Jupyter Notebook</span>
-        <span class="skill">Git & GitHub</span>
-        <span class="skill">Blockchain Analytics</span>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Programming & Data Analysis</h3>
+          <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">NumPy</span>
+            <span class="skill">SQL</span>
+            <span class="skill">DuckDB</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Visualization & Machine Learning</h3>
+          <div class="skills">
+            <span class="skill">Matplotlib</span>
+            <span class="skill">Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Tools & Workflow</h3>
+          <div class="skills">
+            <span class="skill">Jupyter Notebook</span>
+            <span class="skill">Git & GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Domain Knowledge</h3>
+          <div class="skills">
+            <span class="skill">Blockchain Analytics</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
