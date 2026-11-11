@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ethereum transaction and network activity analytics using Python, SQL, DuckDB and public AWS data.">
+  <title>Ethereum On-Chain Analytics | JK Data</title>
+  <style>
+    :root{--bg:#0b1120;--panel:#111c30;--border:#26364e;--text:#e5edf8;--muted:#9aabc2;--accent:#38bdf8;--green:#34d399}
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--accent);text-decoration:none}a:hover{color:var(--green)}.container{width:90%;max-width:1000px;margin:auto}
+    header{border-bottom:1px solid var(--border);padding:20px 0}.nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .logo{font-weight:bold;font-size:19px}.back{font-size:14px}.hero{padding:75px 0 45px}.tag{color:var(--green);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(32px,5vw,48px);line-height:1.2;margin:16px 0}.lead{color:var(--muted);max-width:780px;font-size:17px}
+    section{padding:34px 0}h2{font-size:23px;margin-bottom:18px}h2 span{color:var(--accent)}p{color:var(--muted);margin-bottom:14px}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}.metric,.panel{background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:20px}
+    .metric strong{display:block;color:var(--accent);font-size:25px}.metric small{color:var(--muted)}
+    ul{padding-left:22px;color:var(--muted)}li{margin:7px 0}table{width:100%;border-collapse:collapse;margin:14px 0;background:var(--panel);font-size:14px}
+    th,td{text-align:left;padding:11px;border-bottom:1px solid var(--border)}th{color:var(--accent)}td{color:var(--muted)}
+    .visuals{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.visuals img{width:100%;height:auto;border:1px solid var(--border);border-radius:7px;background:#fff}
+    .visuals p{font-size:14px;margin-top:8px}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+    .callout{border-left:3px solid var(--green);padding:14px 18px;background:var(--panel);border-radius:0 7px 7px 0}
+    footer{border-top:1px solid var(--border);padding:25px 0;margin-top:35px;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="index.html">JK | DATA</a><a class="back" href="index.html">← Back to Portfolio</a></div></header>
+<main class="container">
+  <div class="hero">
+    <div class="tag">Analytics Project · Ethereum · Public Blockchain Data</div>
+    <h1>Ethereum On-Chain Analytics</h1>
+    <p class="lead">A practical analysis of Ethereum transaction behavior, gas consumption and network activity using Python, SQL, DuckDB, Pandas, Matplotlib and public AWS blockchain data.</p>
+    <div class="links">
+      <a href="https://github.com/jkisfahani/Ethereum_OnChain_Analytics">View GitHub Repository →</a>
+      <a href="https://github.com/jkisfahani/Ethereum_OnChain_Analytics/blob/main/reports/ethereum_30_day_network_activity_report.md">Read 30-Day Analysis Report →</a>
+    </div>
+  </div>
+  <section>
+    <h2><span>01.</span> Project at a glance</h2>
+    <div class="metrics">
+      <div class="metric"><strong>53.74M</strong><small>Transactions in 30 days</small></div>
+      <div class="metric"><strong>98.595%</strong><small>Overall success rate</small></div>
+      <div class="metric"><strong>754,769</strong><small>Failed transactions</small></div>
+      <div class="metric"><strong>493,701</strong><small>Average daily unique senders</small></div>
+      <div class="metric"><strong>+0.859</strong><small>Transactions vs. unique senders correlation</small></div>
+    </div>
+    <p style="margin-top:14px">30-day observation period: 1–30 October 2026.</p>
+  </section>
+  <section>
+    <h2><span>02.</span> Objectives and questions</h2>
+    <ul>
+      <li>How does Ethereum transaction activity change by hour and day?</li>
+      <li>What proportion of transactions succeed or fail?</li>
+      <li>How do transaction types and gas metrics differ?</li>
+      <li>How do daily transaction counts relate to unique sending addresses?</li>
+      <li>Can unusual changes in transaction and sender activity be identified?</li>
+    </ul>
+  </section>
+  <section>
+    <h2><span>03.</span> Data and technology</h2>
+    <div class="panel">
+      <p><strong>Data provider:</strong> AWS Public Blockchain Data</p>
+      <p><strong>Blockchain:</strong> Ethereum</p>
+      <p><strong>Storage format:</strong> Apache Parquet (.snappy.parquet)</p>
+      <p><strong>Query approach:</strong> DuckDB reads publicly available data in Amazon S3; AWS credentials are not required for the public files used.</p>
+    </div>
+    <p style="margin-top:14px"><strong>Technology stack:</strong> Python, Pandas, DuckDB, SQL, Matplotlib, Jupyter Notebook, AWS S3, Git and GitHub.</p>
+  </section>
+  <section>
+    <h2><span>04.</span> Key results</h2>
+    <h3 style="margin:12px 0;color:var(--accent)">One-day transaction analysis · 28 October 2026</h3>
+    <table><thead><tr><th>Metric</th><th>Result</th></tr></thead><tbody>
+      <tr><td>Total transactions</td><td>1,996,106</td></tr><tr><td>Successful transactions</td><td>1,971,694</td></tr>
+      <tr><td>Failed transactions</td><td>24,412</td></tr><tr><td>Success rate</td><td>98.78%</td></tr>
+      <tr><td>Estimated transaction fees</td><td>110.4208 ETH</td></tr>
+    </tbody></table>
+    <h3 style="margin:24px 0 12px;color:var(--accent)">30-day network activity · 1–30 October 2026</h3>
+    <table><thead><tr><th>Metric</th><th>Result</th></tr></thead><tbody>
+      <tr><td>Total transactions</td><td>53,737,985</td></tr><tr><td>Successful transactions</td><td>52,983,216</td></tr>
+      <tr><td>Failed transactions</td><td>754,769</td></tr><tr><td>Average daily transactions</td><td>1,791,266</td></tr>
+      <tr><td>Average daily unique senders</td><td>493,701</td></tr><tr><td>Overall success rate</td><td>98.595%</td></tr>
+    </tbody></table>
+  </section>
+  <section>
+    <h2><span>05.</span> Correlation and anomaly detection</h2>
+    <p>Transaction volume and unique sending addresses showed a strong positive correlation of <strong>+0.859</strong> during the observed period. Correlation describes association; it does not establish causation.</p>
+    <p>A rolling seven-day Z-score method with an absolute threshold of at least 2 was used to flag unusual daily activity.</p>
+    <table><thead><tr><th>Date</th><th>Transaction volume</th><th>Unique senders</th></tr></thead><tbody>
+      <tr><td>25 October 2026</td><td>Negative anomaly</td><td>Negative anomaly</td></tr>
+      <tr><td>28 October 2026</td><td>No anomaly</td><td>Positive anomaly</td></tr>
+    </tbody></table>
+    <p>October 25 showed an unusual decline in both measures; October 28 showed an unusual increase in unique sending addresses.</p>
+  </section>
+  <section>
+    <h2><span>06.</span> Visualizations</h2>
+    <div class="visuals">
+      <div><img src="https://raw.githubusercontent.com/jkisfahani/Ethereum_OnChain_Analytics/main/visualizations/02_hourly_activity.png" alt="Hourly Ethereum transaction activity"><p>Hourly transaction activity</p></div>
+      <div><img src="https://raw.githubusercontent.com/jkisfahani/Ethereum_OnChain_Analytics/main/visualizations/01_hourly_failure_rate.png" alt="Hourly transaction failure rate"><p>Hourly transaction failure rate</p></div>
+      <div><img src="https://raw.githubusercontent.com/jkisfahani/Ethereum_OnChain_Analytics/main/visualizations/05_daily_gas_price_distribution.png" alt="Daily gas price distribution"><p>Daily gas price distribution</p></div>
+      <div><img src="https://raw.githubusercontent.com/jkisfahani/Ethereum_OnChain_Analytics/main/visualizations/06_transaction_volume_anomalies.png" alt="Daily transaction volume anomalies"><p>Daily transaction volume anomalies</p></div>
+      <div><img src="https://raw.githubusercontent.com/jkisfahani/Ethereum_OnChain_Analytics/main/visualizations/07_unique_sender_anomalies.png" alt="Daily unique sender anomalies"><p>Daily unique sender anomalies</p></div>
+    </div>
+  </section>
+  <section>
+    <h2><span>07.</span> Reproducibility and project resources</h2>
+    <p>The repository contains five Jupyter notebooks, CSV analysis outputs, visualizations, a 30-day report, requirements and setup instructions. The raw Parquet data is not stored in the repository; the AWS analytics notebooks query public S3 data and therefore require internet access.</p>
+    <div class="panel"><div class="links">
+      <a href="https://github.com/jkisfahani/Ethereum_OnChain_Analytics">Repository →</a>
+      <a href="https://github.com/jkisfahani/Ethereum_OnChain_Analytics/tree/main/notebooks">Analysis notebooks →</a>
+      <a href="https://github.com/jkisfahani/Ethereum_OnChain_Analytics/tree/main/visualizations">All visualizations →</a>
+      <a href="https://github.com/jkisfahani/Ethereum_OnChain_Analytics/blob/main/reports/ethereum_30_day_network_activity_report.md">30-day report →</a>
+    </div></div>
+  </section>
+  <section><div class="callout"><strong>Limitations</strong><p style="margin:8px 0 0">A unique sending address does not necessarily represent one individual user. Correlation does not establish causation, and the anomaly threshold is exploratory. The current network activity analysis covers a 30-day observation period.</p></div></section>
+</main>
+<footer><div class="container">© 2026 JK | Data Science Portfolio · <a href="index.html">Return to homepage</a></div></footer>
+</body>
+</html>
