@@ -145,6 +145,40 @@
       color: #07111f;
     }
 
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .contact-link {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px 22px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .contact-label {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
     section {
       padding: 65px 0;
     }
@@ -535,15 +569,24 @@
       <h2 class="section-title"><span>04.</span> Contact</h2>
 
       <p class="about-text">
-        Interested in data analytics, blockchain research
-        or collaboration?
+        Interested in data analytics, blockchain research or collaboration?
+        I'd be glad to hear from you.
       </p>
 
-      <p style="margin-top: 15px;">
-        <a href="https://github.com/jkisfahani">
-          GitHub: github.com/jkisfahani
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:jkesfahani@gmail.com">
+          <span class="contact-label">Email</span>
+          <span>jkesfahani@gmail.com</span>
         </a>
-      </p>
+        <a class="contact-link" href="https://www.linkedin.com/in/javad-karimzadeh-bb140260/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span>Connect with me</span>
+        </a>
+        <a class="contact-link" href="https://github.com/jkisfahani" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span>github.com/jkisfahani</span>
+        </a>
+      </div>
     </div>
   </section>
 
